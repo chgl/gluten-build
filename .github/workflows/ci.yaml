@@ -24,8 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          apt-get update
-          apt-get install -y cmake gcc g++ maven git
+          sudo apt-get update
+          sudo apt-get install -y cmake gcc g++ maven git
 
       - name: Clone Apache Gluten
         run: |
@@ -37,4 +37,4 @@ jobs:
           MAVEN_ARGS: "-Pdelta"
         run: |
           cd incubator-gluten
-          ./dev/buildbundle-veloxbe.sh --enable_s3=true --spark_version=3.5
+          sudo ./dev/buildbundle-veloxbe.sh --enable_s3=true --spark_version=3.5
