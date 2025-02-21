@@ -5,7 +5,7 @@ ENV TREAT_WARNINGS_AS_ERRORS=0
 
 RUN <<EOF
 apt-get update
-apt-get install -y cmake gcc g++ maven git python3 python3-pip openjdk-17-jdk sudo
+apt-get install -y cmake gcc g++ maven git python3 python3-pip openjdk-17-jdk sudo libre2-dev
 EOF
 
 
