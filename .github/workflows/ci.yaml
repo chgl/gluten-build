@@ -30,7 +30,7 @@ jobs:
       - name: Clone Apache Gluten
         run: |
           # TODO: clone specific tag
-          git clone https://github.com/apache/incubator-gluten.git
+          git clone https://github.com/apache/incubator-gluten.git --depth 1 --branch v1.3.0
 
       - name: Build Apache Gluten
         env:
