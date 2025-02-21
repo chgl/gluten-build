@@ -1,4 +1,4 @@
-FROM docker.io/library/ubuntu:24.04
+FROM docker.io/library/ubuntu:22.04
 
 RUN <<EOF
 apt-get update
@@ -8,8 +8,9 @@ EOF
 
 RUN git clone https://github.com/apache/incubator-gluten.git --depth 1 --branch v1.3.0
 
+ENV MAVEN_ARGS="-Pdelta"
+ENV TREAT_WARNINGS_AS_ERRORS=0
 RUN <<EOF
 cd incubator-gluten
-export MAVEN_ARGS="-Pdelta"
 ./dev/buildbundle-veloxbe.sh --enable_s3=true --spark_version=3.5
 EOF
