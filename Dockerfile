@@ -2,7 +2,7 @@ FROM docker.io/library/ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV MAVEN_ARGS="-Pdelta -DskipTests"
 ENV TREAT_WARNINGS_AS_ERRORS=0
-ENV NUM_THREADS=8
+ENV NUM_THREADS=4
 
 RUN <<EOF
 apt-get update
