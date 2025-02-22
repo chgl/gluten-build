@@ -13,5 +13,5 @@ RUN git clone https://github.com/apache/incubator-gluten.git --depth 1 --branch 
 
 RUN <<EOF
 cd incubator-gluten
-./dev/buildbundle-veloxbe.sh --enable_s3=true --spark_version=3.5
+./dev/buildbundle-veloxbe.sh --enable_s3=ON --spark_version=3.5 --enable_vcpkg=ON --build_arrow=OFF --build_tests=OFF --build_benchmarks=OFF --build_examples=OFF --enable_gcs=OFF --enable_hdfs=OFF --enable_abfs=OFF
 EOF
