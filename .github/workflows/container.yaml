@@ -20,6 +20,7 @@ jobs:
         id: image-build
         with:
           push: false
+          load: true
       - name: Copy release packages from image
         run: |
           docker create --name=build-image "${{ steps.image-build.outputs.imageid }}"
