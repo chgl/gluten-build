@@ -7,7 +7,7 @@ ENV NUM_THREADS=${NUM_THREADS}
 
 RUN <<EOF
 apt-get update
-apt-get install -y cmake gcc g++ maven git python3 python3-pip openjdk-17-jdk sudo libre2-dev libsimdjson-dev tzdata curl zip unzip tar pkg-config bison
+apt-get install -y cmake gcc g++ maven git python3 python3-pip openjdk-17-jdk sudo libre2-dev libsimdjson-dev tzdata curl zip unzip tar pkg-config bison autoconf libelf-dev autoconf-archive
 EOF
 
 
