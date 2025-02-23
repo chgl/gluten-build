@@ -8,7 +8,7 @@ ENV TZ="UTC"
 
 RUN <<EOF
 apt-get update
-apt-get install -y cmake gcc g++ maven git python3 python3-pip openjdk-17-jdk sudo libre2-dev libsimdjson-dev tzdata curl zip unzip tar pkg-config bison autoconf libelf-dev autoconf-archive libtool flex
+apt-get install -y cmake gcc g++ maven git python3 python3-pip openjdk-17-jdk sudo libre2-dev libsimdjson-dev tzdata curl zip unzip tar pkg-config bison autoconf libelf-dev autoconf-archive libtool flex ninja-build
 apt-get purge libjemalloc-dev libjemalloc2 librust-jemalloc-sys-dev
 EOF
 
