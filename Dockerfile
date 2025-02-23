@@ -4,10 +4,12 @@ ENV MAVEN_ARGS="-Pdelta -DskipTests"
 ENV TREAT_WARNINGS_AS_ERRORS=0
 ARG NUM_THREADS=16
 ENV NUM_THREADS=${NUM_THREADS}
+ENV TZ="UTC"
 
 RUN <<EOF
 apt-get update
-apt-get install -y cmake gcc g++ maven git python3 python3-pip openjdk-17-jdk sudo libre2-dev libsimdjson-dev tzdata curl zip unzip tar pkg-config bison autoconf libelf-dev autoconf-archive
+apt-get install -y cmake gcc g++ maven git python3 python3-pip openjdk-17-jdk sudo libre2-dev libsimdjson-dev tzdata curl zip unzip tar pkg-config bison autoconf libelf-dev autoconf-archive libtool
+apt-get purge libjemalloc-dev libjemalloc2 librust-jemalloc-sys-dev
 EOF
 
 
